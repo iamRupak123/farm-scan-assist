@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Agricultural Tech Design System - Professional colors for ATC application */
 
 @layer base {
   :root {
+    /* Core Background & Text */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 210 12% 16%;
+    
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 12% 16%;
+    
+    /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 210 12% 16%;
+    
+    /* Primary - Deep Forest Green */
+    --primary: 158 64% 15%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 158 64% 25%;
+    --primary-lighter: 158 40% 85%;
+    
+    /* Secondary - Warm Earth */
+    --secondary: 25 25% 90%;
+    --secondary-foreground: 158 64% 15%;
+    
+    /* Muted Tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Accent - Fresh Green */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 142 76% 46%;
+    --accent-lighter: 142 50% 88%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Interface Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 158 64% 15%;
+    
+    /* Agricultural Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 15%), hsl(158 64% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-earth: linear-gradient(180deg, hsl(25 25% 95%), hsl(25 25% 90%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(158 64% 15% / 0.1), 0 2px 4px -1px hsl(158 64% 15% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(158 64% 15% / 0.1), 0 4px 6px -2px hsl(158 64% 15% / 0.05);
+    --shadow-large: 0 25px 50px -12px hsl(158 64% 15% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +85,51 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Core Background & Text */
+    --background: 210 12% 8%;
+    --foreground: 0 0% 98%;
+    
+    /* Card System */
+    --card: 210 12% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    /* Popover System */
+    --popover: 210 12% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Primary - Lighter Forest Green for dark mode */
+    --primary: 158 64% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 158 64% 35%;
+    --primary-lighter: 158 40% 20%;
+    
+    /* Secondary - Dark Earth */
+    --secondary: 25 25% 15%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Muted Tones */
+    --muted: 210 12% 16%;
+    --muted-foreground: 215 16% 65%;
+    
+    /* Accent - Bright Green for dark mode */
+    --accent: 142 76% 46%;
+    --accent-foreground: 210 12% 8%;
+    --accent-light: 142 76% 56%;
+    --accent-lighter: 142 50% 25%;
+    
+    /* Status Colors */
+    --success: 142 76% 46%;
+    --success-foreground: 210 12% 8%;
+    --warning: 45 93% 57%;
+    --warning-foreground: 210 12% 8%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 210 12% 8%;
+    
+    /* Interface Elements */
+    --border: 210 12% 20%;
+    --input: 210 12% 20%;
+    --ring: 158 64% 25%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
